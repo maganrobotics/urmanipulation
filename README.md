@@ -2,8 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is a brief guide to the mini WRS Robot Planning & Control System. This system original folked from Weiwei Wan Osaka 
-
+This is an educational resource for SZTU studnets to learn about ur manipulation. This system original from “WRS” at Osaka University.
 
 
 ## Getting Started
@@ -64,11 +63,3 @@ to examine if your the prerequisites and key packages work correctly.
 ```
 TODO
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Thank all related students in HLab for using and suggesting to this software.
