@@ -44,12 +44,9 @@ in the Project View. Their names and usage are as follows.
 
 ```
 basis: Basic helper functions for math computation, data structure conversion, and trimesh processing.
-drivers.devices: Wrapper for the low-level robot or sensor APIs.
-drivers.rpc: Remote procedure call interfaces. To be run on remote servers.
 grasping: Grasp planners.
 manipulation: Stability Analyzers; Placement planners.
 planning: Trajectory-level and probabilistic motion-level planners.
-robotcon: Interface functions to connect and control robots.
 robotsim: Robot classes are defined in this package.
 vision: Utility functiosn for processing 2D and 3D vision data.
 visualization: Graphics. Panda3D is the main graphics engine.
