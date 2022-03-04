@@ -61,7 +61,6 @@ to examine if your the prerequisites and key packages work correctly.
 0000_example folder
 
 ```
-TODO
 bullet_test1.py and bullet_test2.py show how to use bullet, which is a dynamical engine
 rtq85_define_grasps.py show how to use grasping function
 test_handover.py show how to use handover function to generate pose
@@ -71,7 +70,6 @@ ur3e_dual_dynamics.py show a dynamical model of ur3e_dual
 
 0000_book folder
 ```
-TODO
 this series of grasping_xxxx.py :show you how to use grasping planning  
 this series of math_xxxx.py : show  how to use robot_math function
 motion_rrtconnect.py : show how to use motion planning function 
@@ -81,7 +79,6 @@ this series of wrssystem_xxxx: show how to use collision_model and how to use jl
 app folder
 
 ```
-TODO
 in app->demo
 roller_hole_docking.py :show a whole process of ur3e_dual manipulation and how to use digital twin
 
