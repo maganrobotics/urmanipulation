@@ -81,7 +81,6 @@ in app->demo
 roller_hole_docking.py :show a whole process of ur3e_dual manipulation and how to use digital twin
 
 ```
-Creat your own code in the app folder and run in simulation.
 
 ### Running on a Real Robot (UR3e)
-To run your code in a real UR3e dual-arm robot, please drop by my office and talk to me. 
+Creat your own code in the app folder and test in simulation. To run your code in a real UR3e dual-arm robot, please drop by my office and talk to me. 
