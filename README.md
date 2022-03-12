@@ -28,7 +28,7 @@ scikit-learn>=0.23.2 # vital?
 Qpanda3D==0.2.8 # must be this versions 
 ```
 
-### Installing
+### Installation
 
 A step by step series of examples that tell you how to get a development env running. The recommended IDE(Integrated
 Development Environment) is [PyCharm](https://www.jetbrains.com/pycharm/). You can get a community version for research
@@ -51,6 +51,7 @@ robotsim: Robot classes are defined in this package.
 vision: Utility functiosn for processing 2D and 3D vision data.
 visualization: Graphics. Panda3D is the main graphics engine.
 ```
+### A Quick-Start: Demo in Simulation
 
 Besides the abovementioned packages, there are some folders that host several examples. Run the following one
 to examine if your the prerequisites and key packages work correctly.
@@ -80,3 +81,7 @@ in app->demo
 roller_hole_docking.py :show a whole process of ur3e_dual manipulation and how to use digital twin
 
 ```
+Creat your own code in the app folder and run in simulation.
+
+### Running on a Real Robot (UR3e)
+To run your code in a real UR3e dual-arm robot, please drop by my office and talk to me. 
