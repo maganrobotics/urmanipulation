@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is an educational resource for SZTU studnets to learn about ur manipulation. This system original from “WRS” at Osaka University.
+This is an educational resource for SZTU students to learn about ur manipulation. This system original from “WRS” at Osaka University.
 
 
 ## Getting Started
