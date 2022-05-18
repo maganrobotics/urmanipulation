@@ -1,0 +1,1051 @@
+<CoordinateSystem> { Z-up } 
+<Material> Front {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+<Material> Left {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+<Material> Right {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+<Material> Down {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+<Material> Back {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+<Material> Up {
+  <Scalar> baser { 0.05126941204071045 }
+  <Scalar> baseg { 0.3712378740310669 }
+  <Scalar> baseb { 0.6866853833198547 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.7083761096000671 }
+  <Scalar> baseg { 0.03954613581299782 }
+  <Scalar> baseb { 0.038204390555620193 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9046614170074463 }
+  <Scalar> baseg { 0.2581828832626343 }
+  <Scalar> baseb { 0.02217390388250351 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 1.0 }
+  <Scalar> baseg { 1.0 }
+  <Scalar> baseb { 1.0 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.44520115852355957 }
+  <Scalar> baseg { 0.5394796133041382 }
+  <Scalar> baseb { 0.018500246107578278 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+  <Scalar> baser { 0.9911022782325745 }
+  <Scalar> baseg { 0.6038272380828857 }
+  <Scalar> baseb { 0.029556885361671448 }
+  <Scalar> roughness { 0.4000000059604645 }
+  <Scalar> metallic { 0.0 }
+  <Scalar> local { 0 }
+}
+
+  <Group> Plane {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane {
+    
+      <Vertex> 0 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Left }
+      <Normal> {1.000000 0.000000 -0.000001}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane }} 
+    }
+    <Polygon> {
+      <MRef> { Left }
+      <Normal> {-0.707107 -0.707107 0.000000}
+      <VertexRef> { 4 5 6 <Ref> { Plane }} 
+    }
+    <Polygon> {
+      <MRef> { Left }
+      <Normal> {-0.707106 -0.000000 0.707107}
+      <VertexRef> { 7 8 9 <Ref> { Plane }} 
+    }
+    <Polygon> {
+      <MRef> { Left }
+      <Normal> {-0.707107 0.707107 0.000000}
+      <VertexRef> { 10 11 12 <Ref> { Plane }} 
+    }
+    <Polygon> {
+      <MRef> { Left }
+      <Normal> {-0.707107 -0.000000 -0.707106}
+      <VertexRef> { 13 14 15 <Ref> { Plane }} 
+    }
+  }
+  <Group> Plane.001 {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane.001 {
+    
+      <Vertex> 0 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {-0.000000 0.000000 -0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {-0.000000 0.000000 -0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {-0.000000 0.000000 -0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {-0.000000 0.000000 -0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Front }
+      <Normal> {0.000000 1.000000 0.000000}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane.001 }} 
+    }
+    <Polygon> {
+      <MRef> { Front }
+      <Normal> {0.707107 -0.707107 -0.000000}
+      <VertexRef> { 4 5 6 <Ref> { Plane.001 }} 
+    }
+    <Polygon> {
+      <MRef> { Front }
+      <Normal> {0.000000 -0.707107 0.707107}
+      <VertexRef> { 7 8 9 <Ref> { Plane.001 }} 
+    }
+    <Polygon> {
+      <MRef> { Front }
+      <Normal> {-0.707107 -0.707107 0.000000}
+      <VertexRef> { 10 11 12 <Ref> { Plane.001 }} 
+    }
+    <Polygon> {
+      <MRef> { Front }
+      <Normal> {-0.000000 -0.707107 -0.707107}
+      <VertexRef> { 13 14 15 <Ref> { Plane.001 }} 
+    }
+  }
+  <Group> Plane.002 {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane.002 {
+    
+      <Vertex> 0 {0.500000 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {0.500000 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {-0.500000 0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {0.500000 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Up }
+      <Normal> {0.000001 0.000000 1.000000}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane.002 }} 
+    }
+    <Polygon> {
+      <MRef> { Up }
+      <Normal> {-0.000001 -0.707107 -0.707107}
+      <VertexRef> { 4 5 6 <Ref> { Plane.002 }} 
+    }
+    <Polygon> {
+      <MRef> { Up }
+      <Normal> {-0.707107 -0.000000 -0.707106}
+      <VertexRef> { 7 8 9 <Ref> { Plane.002 }} 
+    }
+    <Polygon> {
+      <MRef> { Up }
+      <Normal> {-0.000001 0.707107 -0.707107}
+      <VertexRef> { 10 11 12 <Ref> { Plane.002 }} 
+    }
+    <Polygon> {
+      <MRef> { Up }
+      <Normal> {0.707106 -0.000000 -0.707107}
+      <VertexRef> { 13 14 15 <Ref> { Plane.002 }} 
+    }
+  }
+  <Group> Plane.003 {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane.003 {
+    
+      <Vertex> 0 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {-0.000000 0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {-0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {-0.000000 0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {-0.000000 0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {0.500000 -0.500000 0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {-0.000000 0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Back }
+      <Normal> {0.000000 -1.000000 -0.000000}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane.003 }} 
+    }
+    <Polygon> {
+      <MRef> { Back }
+      <Normal> {-0.707107 0.707107 0.000000}
+      <VertexRef> { 4 5 6 <Ref> { Plane.003 }} 
+    }
+    <Polygon> {
+      <MRef> { Back }
+      <Normal> {0.000000 0.707107 0.707107}
+      <VertexRef> { 7 8 9 <Ref> { Plane.003 }} 
+    }
+    <Polygon> {
+      <MRef> { Back }
+      <Normal> {0.707107 0.707107 -0.000000}
+      <VertexRef> { 10 11 12 <Ref> { Plane.003 }} 
+    }
+    <Polygon> {
+      <MRef> { Back }
+      <Normal> {-0.000000 0.707107 -0.707107}
+      <VertexRef> { 13 14 15 <Ref> { Plane.003 }} 
+    }
+  }
+  <Group> Plane.004 {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane.004 {
+    
+      <Vertex> 0 {-0.500001 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {-0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {-0.499999 0.500000 -0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {-0.500001 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {-0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {-0.499999 0.500000 -0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {-0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {-0.499999 0.500000 -0.500000
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {-0.500001 -0.500000 0.500000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {-0.500000 0.500000 0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Right }
+      <Normal> {-1.000000 0.000000 -0.000001}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane.004 }} 
+    }
+    <Polygon> {
+      <MRef> { Right }
+      <Normal> {0.707107 -0.707107 0.000001}
+      <VertexRef> { 4 5 6 <Ref> { Plane.004 }} 
+    }
+    <Polygon> {
+      <MRef> { Right }
+      <Normal> {0.707107 -0.000000 -0.707106}
+      <VertexRef> { 7 8 9 <Ref> { Plane.004 }} 
+    }
+    <Polygon> {
+      <MRef> { Right }
+      <Normal> {0.707107 0.707107 0.000001}
+      <VertexRef> { 10 11 12 <Ref> { Plane.004 }} 
+    }
+    <Polygon> {
+      <MRef> { Right }
+      <Normal> {0.707106 -0.000000 0.707107}
+      <VertexRef> { 13 14 15 <Ref> { Plane.004 }} 
+    }
+  }
+  <Group> Plane.005 {
+    <Transform> {
+      <Matrix4> {
+        1.0 0.0 0.0 0.0 
+        0.0 1.0 0.0 0.0 
+        0.0 0.0 1.0 0.0 
+        0.0 0.0 0.0 1.0 
+      }
+    }
+    
+    <VertexPool> Plane.005 {
+    
+      <Vertex> 0 {-0.500000 -0.500000 -0.500001
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 1 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 2 {0.500000 0.500000 -0.499999
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 3 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 4 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 5 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 6 {-0.500000 -0.500000 -0.500001
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 7 {0.500000 -0.500000 -0.500000
+        <UV>  {
+          1.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 8 {0.500000 0.500000 -0.499999
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 9 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 10 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 11 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 12 {0.500000 0.500000 -0.499999
+        <UV>  {
+          1.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 13 {-0.500000 -0.500000 -0.500001
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 14 {-0.000000 -0.000000 0.000000
+        <UV>  {
+          0.000000 0.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }
+      <Vertex> 15 {-0.500000 0.500000 -0.500000
+        <UV>  {
+          0.000000 1.000000 
+        }
+        <RGBA> { 1 1 1 1 }
+      }}
+    
+    
+    <Polygon> {
+      <MRef> { Down }
+      <Normal> {0.000001 0.000000 -1.000000}
+      <VertexRef> { 0 1 2 3 <Ref> { Plane.005 }} 
+    }
+    <Polygon> {
+      <MRef> { Down }
+      <Normal> {-0.000000 -0.707107 0.707107}
+      <VertexRef> { 4 5 6 <Ref> { Plane.005 }} 
+    }
+    <Polygon> {
+      <MRef> { Down }
+      <Normal> {0.707106 -0.000000 0.707107}
+      <VertexRef> { 7 8 9 <Ref> { Plane.005 }} 
+    }
+    <Polygon> {
+      <MRef> { Down }
+      <Normal> {-0.000001 0.707107 0.707107}
+      <VertexRef> { 10 11 12 <Ref> { Plane.005 }} 
+    }
+    <Polygon> {
+      <MRef> { Down }
+      <Normal> {-0.707107 -0.000000 0.707106}
+      <VertexRef> { 13 14 15 <Ref> { Plane.005 }} 
+    }
+  }
