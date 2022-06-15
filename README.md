@@ -83,4 +83,4 @@ roller_hole_docking.py :show a whole process of ur3e_dual manipulation and how t
 ```
 
 ### Running on a Real Robot (UR3e)
-Creat your own code in the app folder and test in simulation. To run your code in a real UR3e dual-arm robot, please drop by my office at SZTU.. 
+Creat your own code in the app folder and test in simulation. To run your code in a real UR3e dual-arm robot, please drop by my office at SZTU. 
