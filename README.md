@@ -66,7 +66,17 @@ The existing project uses Panda3D for visualization and includes scientific-comp
 
 > The repository is an evolving research/education codebase rather than a polished binary distribution. Dependency compatibility can vary by Python version and operating system. Community v0.1 will progressively improve reproducibility.
 
-### 3. Start with simulation
+### 3. Run the Community Quick Start
+
+From the repository root:
+
+```bash
+python community/quick_start.py
+```
+
+This simulation-only example introduces the basic target pose → IK → joint configuration → FK → visualization loop. See [`community/README.md`](community/README.md) for the walkthrough.
+
+### 4. Continue with the existing simulation examples
 
 Explore `0000_examples/` and `0000_book/` before connecting any physical robot.
 
