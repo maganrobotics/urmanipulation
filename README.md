@@ -1,86 +1,154 @@
-# Universal Robots UR3e Planning & Control System
+# OmindOS Manipulation Community
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Community edition for learning robot manipulation, motion planning, grasping, and dual-arm coordination.**
 
-This is an educational resource for SZTU students to learn about ur manipulation. This system original from “WRS” at Osaka University.
+This repository is the community learning edition of the manipulation stack used as a foundation for **OmindOS Manipulation**. It is intended for education, research, prototyping, and community experimentation.
 
+> **Status:** Community v0.1 — the first community release focuses on making the existing UR3e simulation and planning examples easier to understand and explore. The underlying algorithms are intentionally kept close to the original project at this stage.
 
-## Getting Started
+## What you can learn
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing
-purposes.
+A suggested learning path is:
 
+1. **Robot basics and kinematics** — coordinate frames, joint chains, forward/inverse kinematics.
+2. **Robot simulation** — build and visualize robot models with Panda3D.
+3. **Grasping** — define grippers, grasp poses, and grasp candidates.
+4. **Collision checking** — reason about robot, object, and environment collisions.
+5. **Motion planning** — generate collision-aware motions, including RRT-Connect examples.
+6. **Dual-arm manipulation** — explore handover and coordinated manipulation.
+7. **Integrated manipulation** — study a complete dual-arm manipulation / digital-twin example.
 
+## Repository map
 
-### Prerequisites
+The current codebase contains the original research and teaching modules. Important starting points include:
 
-The following packages are needed to run this system.
-
-
-
-```
-panda3d>=1.10.7 # vital, visualization
-numpy>=1.17.4 # vital, matrix computation
-pycollada>=0.7.1 # optional, required by trimesh to load dae files
-opencv-python>=4.4.0.46 # optional, required by vision
-opencv-contrib-python>=4.4.0.46 # optional, required by vision
-scikit-learn>=0.23.2 # vital?
-Qpanda3D==0.2.8 # must be this versions 
-```
-
-### Installation
-
-A step by step series of examples that tell you how to get a development env running. The recommended IDE(Integrated
-Development Environment) is [PyCharm](https://www.jetbrains.com/pycharm/). You can get a community version for research
-purpose at [PyCharm Community Version](https://www.jetbrains.com/pycharm/download/). Other platform like Visual Studio
-Code might also be helpful, although I never tested them.
-
-
-
-Clone this repository to your local disk and open the folder as a project in your PyCharm IDE, you will see all packages
-in the Project View. Their names and usage are as follows.
-
-
-
-```
-basis: Basic helper functions for math computation, data structure conversion, and trimesh processing.
-grasping: Grasp planners.
-manipulation: Stability Analyzers; Placement planners.
-planning: Trajectory-level and probabilistic motion-level planners.
-robotsim: Robot classes are defined in this package.
-vision: Utility functiosn for processing 2D and 3D vision data.
-visualization: Graphics. Panda3D is the main graphics engine.
-```
-### A Quick-Start: Demo in Simulation
-
-Besides the abovementioned packages, there are some folders that host several examples. Run the following one
-to examine if your the prerequisites and key packages work correctly.
-
-0000_example folder
-
-```
-bullet_test1.py and bullet_test2.py show how to use bullet, which is a dynamical engine
-rtq85_define_grasps.py show how to use grasping function
-test_handover.py show how to use handover function to generate pose
-ur3e_dual_dynamics.py show a dynamical model of ur3e_dual
-
+```text
+basis/              Mathematical and geometry utilities
+grasping/           Grasp-related algorithms and utilities
+manipulation/       Manipulation and placement functionality
+motion/             Motion-related functionality
+motionplanning/     Motion-planning algorithms
+robot_sim/          Robot simulation models
+modeling/           Geometric and collision models
+visualization/      Visualization utilities
+pandaplotutils/     Panda3D-related visualization utilities
+0000_examples/      Runnable examples
+0000_book/          Learning-oriented examples
+app/                Integrated application demos
 ```
 
-0000_book folder
-```
-this series of grasping_xxxx.py :show you how to use grasping planning  
-this series of math_xxxx.py : show  how to use robot_math function
-motion_rrtconnect.py : show how to use motion planning function 
-this series of wrssystem_xxxx: show how to use collision_model and how to use jlchain
+Some directory names differ from descriptions in older documentation. This map follows the current repository structure.
 
-```
-app folder
+## Quick start
 
-```
-in app->demo
-roller_hole_docking.py :show a whole process of ur3e_dual manipulation and how to use digital twin
+### 1. Clone the community repository
 
+```bash
+git clone https://github.com/maganrobotics-boop/urmanipulation.git
+cd urmanipulation
 ```
 
-### Running on a Real Robot (UR3e)
-Creat your own code in the app folder and test in simulation. To run your code in a real UR3e dual-arm robot, please drop by my office at SZTU. 
+For the v0.1 development snapshot:
+
+```bash
+git checkout community-v0.1
+```
+
+### 2. Create a Python environment
+
+A dedicated virtual environment is recommended. Install the project dependencies from:
+
+```bash
+pip install -r requirements.txt
+```
+
+The existing project uses Panda3D for visualization and includes scientific-computing, geometry, vision, and planning dependencies.
+
+> The repository is an evolving research/education codebase rather than a polished binary distribution. Dependency compatibility can vary by Python version and operating system. Community v0.1 will progressively improve reproducibility.
+
+### 3. Start with simulation
+
+Explore `0000_examples/` and `0000_book/` before connecting any physical robot.
+
+Representative examples in the existing project include:
+
+- Bullet / dynamics examples
+- grasp definition examples
+- dual-arm handover examples
+- UR3e dual-arm simulation
+- robot-math and grasp-planning examples
+- RRT-Connect motion-planning examples
+
+For an integrated example, see the demos under `app/`, including the existing roller-hole docking / dual-arm manipulation workflow where available in the current tree.
+
+## Community learning route
+
+| Stage | Topic | Goal |
+|---|---|---|
+| 01 | Robot model | Understand links, joints, frames, and robot representation |
+| 02 | Kinematics | Move from joint configurations to end-effector poses and back |
+| 03 | Grasping | Generate and inspect grasp candidates |
+| 04 | Collision | Check whether a planned state is physically feasible |
+| 05 | Planning | Generate collision-aware robot motion |
+| 06 | Dual arm | Coordinate two manipulators and study handover |
+| 07 | Integrated task | Combine perception/modeling, planning, and manipulation |
+
+The long-term Community goal is to make each stage independently runnable and suitable for coursework, self-study, and research prototyping.
+
+## Real robots
+
+**Start in simulation.**
+
+The Community repository should not be treated as a plug-and-play safety controller for a physical industrial manipulator. Before running generated motions on a real robot, independently validate joint limits, collision constraints, workspace safety, emergency-stop behavior, payload/tool configuration, and the manufacturer's operating requirements.
+
+Hardware adapters and deployment-specific interfaces can evolve separately from the community learning examples.
+
+## OmindOS
+
+OmindOS is being organized as modular robot capabilities. This repository represents the **Manipulation Community** track:
+
+```text
+OmindOS Navigation Community
+        +
+OmindOS Manipulation Community
+        ↓
+Mobile Manipulation / Embodied Robot Applications
+```
+
+The Community edition is intended to remain useful on its own for learning and experimentation. Product-specific integrations, hardware deployment, validation, and support may be maintained separately.
+
+## Project origin and attribution
+
+This repository is derived from the **Universal Robots UR3e Planning & Control System** and originates from work based on / inspired by the **WRS** robotics software developed by **Weiwei Wan and collaborators at Osaka University**.
+
+The original repository license and attribution are intentionally preserved. Please retain the applicable copyright and license notices when redistributing derived work.
+
+## License
+
+This repository is distributed under the **MIT License**. See [LICENSE](LICENSE).
+
+The existing LICENSE identifies:
+
+> Copyright (c) 2020 Weiwei Wan
+
+Community documentation and later contributions do not remove or replace the original copyright notice.
+
+## Contributing
+
+Community contributions are welcome, particularly:
+
+- reproducible installation instructions;
+- verified examples;
+- bug fixes;
+- clearer learning materials;
+- robot-model adapters;
+- simulation examples;
+- manipulation and motion-planning improvements.
+
+For substantial changes, prefer a focused issue or pull request with a runnable example and a short explanation of the expected behavior.
+
+---
+
+**OmindOS Manipulation Community v0.1**
+
+Learn in simulation. Validate before hardware. Build reusable robot manipulation capabilities.
