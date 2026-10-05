@@ -91,6 +91,29 @@ Representative examples in the existing project include:
 
 For an integrated example, see the demos under `app/`, including the existing roller-hole docking / dual-arm manipulation workflow where available in the current tree.
 
+## Community Demos — from basics to dual-arm manipulation
+
+The Community edition is organized around progressive demos so learners can move from a minimal simulation toward complete manipulation tasks.
+
+| Demo | Topic | What you learn | Status |
+|---|---|---|---|
+| **Demo 01 — Quick Start** | Kinematics | target pose → IK → joint configuration → FK → visualization | Available |
+| **Demo 02 — UR3e Single Arm** | Manipulator basics | UR3e model, joint motion, TCP and end-effector pose | Planned for v0.1 |
+| **Demo 03 — Grasping** | Robot grasping | gripper model, grasp pose and grasp candidates | Planned for v0.1 |
+| **Demo 04 — Motion Planning** | RRT-Connect | collision-aware path planning from start to goal | Planned for v0.1 |
+| **Demo 05 — Dual-arm Coordination** | Dual-arm manipulation | two-arm configuration, handover and coordinated motion | Planned for v0.1 |
+| **Demo 06 — Integrated Task** | Complete manipulation workflow | combine grasping, planning, collision checking and dual-arm manipulation | Planned |
+
+Start here:
+
+```bash
+python community/quick_start.py
+```
+
+Then follow [`community/README.md`](community/README.md) and [`docs/LEARNING_PATH.md`](docs/LEARNING_PATH.md).
+
+The original examples remain available under `0000_examples/`, `0000_book/`, and `app/`. Community demos provide a cleaner learning layer on top of them rather than replacing the upstream research code.
+
 ## Community learning route
 
 | Stage | Topic | Goal |
