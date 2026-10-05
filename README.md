@@ -102,7 +102,8 @@ The Community edition is organized around progressive demos so learners can move
 | **Demo 03 — Grasping** | Robot grasping | gripper model, grasp pose and grasp candidates | Planned for v0.1 |
 | **Demo 04 — Motion Planning** | RRT-Connect | collision-aware path planning from start to goal | Planned for v0.1 |
 | **Demo 05 — Dual-arm Coordination** | Dual-arm manipulation | two-arm configuration, handover and coordinated motion | Planned for v0.1 |
-| **Demo 06 — Integrated Task** | Complete manipulation workflow | combine grasping, planning, collision checking and dual-arm manipulation | Planned |
+| **Demo 06 — Mobile Dual-arm Manipulation** | Mobile manipulation | connect a ROS2/C++ mobile base with Python dual-arm manipulation through stable ROS2 interfaces | Planned |
+| **Demo 07 — Integrated Task** | Complete manipulation workflow | combine navigation, grasping, planning, collision checking and dual-arm manipulation | Planned |
 
 Start here:
 
@@ -135,6 +136,37 @@ The long-term Community goal is to make each stage independently runnable and su
 The Community repository should not be treated as a plug-and-play safety controller for a physical industrial manipulator. Before running generated motions on a real robot, independently validate joint limits, collision constraints, workspace safety, emergency-stop behavior, payload/tool configuration, and the manufacturer's operating requirements.
 
 Hardware adapters and deployment-specific interfaces can evolve separately from the community learning examples.
+
+## Mobile Dual-arm Architecture
+
+OmindOS does **not** require every robotics module to use the same programming language. The integration contract is ROS2.
+
+```text
+                  OmindOS
+                     |
+        +------------+------------+
+        |                         |
+Navigation Community       Manipulation Community
+    ROS2 / C++                    Python
+        |                         |
+ localization / mapping      grasping / planning
+ navigation / base control   single & dual-arm control
+        |                         |
+        +------------+------------+
+                     |
+             ROS2 Interface Layer
+                     |
+          Mobile Dual-arm Robot
+```
+
+The design principle is **interface unification, not language unification**:
+
+- Navigation can remain ROS2/C++ for localization, mapping, navigation, and base control.
+- Manipulation can remain Python for kinematics, grasping, motion planning, dual-arm coordination, and higher-level experimentation.
+- A Python ROS2 adapter (`rclpy`) can expose manipulation capabilities as ROS2 topics, services, and actions.
+- Mobile manipulation composes both sides through stable ROS2 contracts rather than merging both codebases into one language.
+
+A future OmindOS integration layer should standardize robot pose/state, navigation goals and results, manipulation goals and results, task status, collision/safety state, and recovery behavior. This allows Navigation and Manipulation implementations to evolve independently while remaining interoperable.
 
 ## OmindOS
 
