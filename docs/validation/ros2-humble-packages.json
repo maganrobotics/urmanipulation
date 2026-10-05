@@ -1,0 +1,907 @@
+[
+  {
+    "name": "_openmp_mutex",
+    "version": "4.5",
+    "build": "20_gnu"
+  },
+  {
+    "name": "argcomplete",
+    "version": "3.7.2",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "bzip2",
+    "version": "1.0.8",
+    "build": "hda65f42_10"
+  },
+  {
+    "name": "c-ares",
+    "version": "1.34.8",
+    "build": "hebe6cf0_2"
+  },
+  {
+    "name": "ca-certificates",
+    "version": "2026.7.22",
+    "build": "hbd8a1cb_0"
+  },
+  {
+    "name": "catkin_pkg",
+    "version": "1.1.1",
+    "build": "pyhd8ed1ab_0"
+  },
+  {
+    "name": "cmake",
+    "version": "4.4.4",
+    "build": "hff7ac6b_0"
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "build": "pyhd8ed1ab_1"
+  },
+  {
+    "name": "cyclonedds",
+    "version": "0.10.5",
+    "build": "h9a70dda_0"
+  },
+  {
+    "name": "docutils",
+    "version": "0.23",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "empy",
+    "version": "4.2.1",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "exceptiongroup",
+    "version": "1.3.1",
+    "build": "pyhd8ed1ab_0"
+  },
+  {
+    "name": "fmt",
+    "version": "12.1.0",
+    "build": "h76c4fd7_1"
+  },
+  {
+    "name": "foonathan-memory",
+    "version": "0.7.4",
+    "build": "h54a6638_1"
+  },
+  {
+    "name": "gmock",
+    "version": "1.18.0",
+    "build": "h48ecd08_1"
+  },
+  {
+    "name": "gtest",
+    "version": "1.18.0",
+    "build": "h171cf75_1"
+  },
+  {
+    "name": "icu",
+    "version": "78.3",
+    "build": "py310h44b86e0_2"
+  },
+  {
+    "name": "importlib-metadata",
+    "version": "9.0.1",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "importlib_resources",
+    "version": "7.1.0",
+    "build": "pyhd8ed1ab_0"
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.0",
+    "build": "pyhd8ed1ab_0"
+  },
+  {
+    "name": "keyutils",
+    "version": "1.6.3",
+    "build": "h7cc23a3_1"
+  },
+  {
+    "name": "krb5",
+    "version": "1.22.2",
+    "build": "hbc21106_2"
+  },
+  {
+    "name": "lark-parser",
+    "version": "0.12.0",
+    "build": "pyhd8ed1ab_1"
+  },
+  {
+    "name": "ld_impl_linux-64",
+    "version": "2.46.1",
+    "build": "default_hbd61a6d_102"
+  },
+  {
+    "name": "libacl",
+    "version": "2.4.0",
+    "build": "h1b0031e_2"
+  },
+  {
+    "name": "libattr",
+    "version": "2.6.0",
+    "build": "h11a17bc_1"
+  },
+  {
+    "name": "libblas",
+    "version": "3.11.0",
+    "build": "11_h4a7cf45_openblas"
+  },
+  {
+    "name": "libcblas",
+    "version": "3.11.0",
+    "build": "11_h0358290_openblas"
+  },
+  {
+    "name": "libcurl",
+    "version": "8.22.0",
+    "build": "ha042cf0_0"
+  },
+  {
+    "name": "libedit",
+    "version": "3.1.20250104",
+    "build": "pl5321h373387f_1"
+  },
+  {
+    "name": "libev",
+    "version": "4.33",
+    "build": "h280c20c_3"
+  },
+  {
+    "name": "libexpat",
+    "version": "2.8.5",
+    "build": "hd2095e1_0"
+  },
+  {
+    "name": "libffi",
+    "version": "3.7.0",
+    "build": "h81df57d_1"
+  },
+  {
+    "name": "libgcc",
+    "version": "16.2.0",
+    "build": "ha9f2e26_7"
+  },
+  {
+    "name": "libgfortran",
+    "version": "16.2.0",
+    "build": "h69a702a_7"
+  },
+  {
+    "name": "libgfortran5",
+    "version": "16.2.0",
+    "build": "h6b99dfc_7"
+  },
+  {
+    "name": "libgomp",
+    "version": "16.2.0",
+    "build": "he0feb66_7"
+  },
+  {
+    "name": "libiceoryx-binding-c",
+    "version": "2.95.8",
+    "build": "h1059693_5"
+  },
+  {
+    "name": "libiceoryx-hoofs",
+    "version": "2.95.8",
+    "build": "hfe315d3_5"
+  },
+  {
+    "name": "libiceoryx-platform",
+    "version": "2.95.8",
+    "build": "hf91fcae_5"
+  },
+  {
+    "name": "libiceoryx-posh",
+    "version": "2.95.8",
+    "build": "hb5873e6_5"
+  },
+  {
+    "name": "liblapack",
+    "version": "3.11.0",
+    "build": "11_h47877c9_openblas"
+  },
+  {
+    "name": "liblzma",
+    "version": "5.8.3",
+    "build": "hb03c661_1"
+  },
+  {
+    "name": "libmpdec",
+    "version": "4.0.0",
+    "build": "hb03c661_2"
+  },
+  {
+    "name": "libnghttp2",
+    "version": "1.68.1",
+    "build": "h74cf4be_1"
+  },
+  {
+    "name": "libopenblas",
+    "version": "0.3.34",
+    "build": "pthreads_hf13c14d_2"
+  },
+  {
+    "name": "libpsl",
+    "version": "0.23.1",
+    "build": "hd9e3e90_1"
+  },
+  {
+    "name": "libpython",
+    "version": "3.14.7",
+    "build": "hdc7f604_106_cp314"
+  },
+  {
+    "name": "libsqlite",
+    "version": "3.53.4",
+    "build": "h0737f62_102"
+  },
+  {
+    "name": "libssh2",
+    "version": "1.11.1",
+    "build": "h6154650_1"
+  },
+  {
+    "name": "libstdcxx",
+    "version": "16.2.0",
+    "build": "h934c35e_7"
+  },
+  {
+    "name": "libuuid",
+    "version": "2.42.4",
+    "build": "hcfc3c73_0"
+  },
+  {
+    "name": "libuv",
+    "version": "1.52.1",
+    "build": "h280c20c_1"
+  },
+  {
+    "name": "libzlib",
+    "version": "1.3.2",
+    "build": "h25fd6f3_3"
+  },
+  {
+    "name": "ncurses",
+    "version": "6.6",
+    "build": "hdb14827_1"
+  },
+  {
+    "name": "numpy",
+    "version": "2.5.3",
+    "build": "py314hd3a7d6b_0"
+  },
+  {
+    "name": "openssl",
+    "version": "3.6.5",
+    "build": "h781a0a9_0"
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "build": "pyhc364b38_0"
+  },
+  {
+    "name": "pluggy",
+    "version": "1.6.0",
+    "build": "pyhf9edf01_1"
+  },
+  {
+    "name": "pygments",
+    "version": "2.21.0",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "build": "pyh5ded981_0"
+  },
+  {
+    "name": "pytest",
+    "version": "9.1.1",
+    "build": "pyhc364b38_2"
+  },
+  {
+    "name": "python",
+    "version": "3.14.7",
+    "build": "hcd007b5_106_cp314"
+  },
+  {
+    "name": "python-dateutil",
+    "version": "2.9.0.post0",
+    "build": "pyhe01879c_2"
+  },
+  {
+    "name": "python_abi",
+    "version": "3.14",
+    "build": "9_cp314"
+  },
+  {
+    "name": "readline",
+    "version": "8.3",
+    "build": "hd6e31c0_1"
+  },
+  {
+    "name": "rhash",
+    "version": "1.4.6",
+    "build": "hb03c661_2"
+  },
+  {
+    "name": "ros-humble-control-msgs",
+    "version": "4.9.0",
+    "build": "hb0f4dca_20"
+  },
+  {
+    "name": "ros-humble-nav-msgs",
+    "version": "4.9.1",
+    "build": "hb0f4dca_20"
+  },
+  {
+    "name": "ros-humble-nav2-msgs",
+    "version": "1.1.20",
+    "build": "hb0f4dca_20"
+  },
+  {
+    "name": "ros-humble-rclpy",
+    "version": "3.3.21",
+    "build": "hb0f4dca_20"
+  },
+  {
+    "name": "ros-humble-rmw-fastrtps-cpp",
+    "version": "6.2.10",
+    "build": "hb0f4dca_20"
+  },
+  {
+    "name": "ros2-action-msgs",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-core",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-definitions",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-dependencies",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-include-directories",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-interfaces",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-libraries",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-link-flags",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-export-targets",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-gen-version-h",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-gmock",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-gtest",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-include-directories",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-libraries",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-pytest",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-python",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-ros",
+    "version": "0.10.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-target-dependencies",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-test",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-cmake-version",
+    "version": "1.3.14",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-index-cpp",
+    "version": "1.4.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-index-python",
+    "version": "1.4.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ament-package",
+    "version": "0.14.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-builtin-interfaces",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-control-msgs",
+    "version": "4.9.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-cyclonedds",
+    "version": "0.10.5",
+    "build": "py314hd7f02ef_20"
+  },
+  {
+    "name": "ros2-distro-mutex",
+    "version": "0.10.0",
+    "build": "humble_20"
+  },
+  {
+    "name": "ros2-domain-coordinator",
+    "version": "0.10.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-fastcdr",
+    "version": "1.0.29",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-fastrtps",
+    "version": "2.6.11",
+    "build": "np2py314h0ed7e73_20"
+  },
+  {
+    "name": "ros2-fastrtps-cmake-module",
+    "version": "2.2.4",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-foonathan-memory-vendor",
+    "version": "1.2.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-geometry-msgs",
+    "version": "4.9.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-gmock-vendor",
+    "version": "1.10.9006",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-gtest-vendor",
+    "version": "1.10.9006",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-iceoryx-binding-c",
+    "version": "2.95.8",
+    "build": "py314h02e3bbf_20"
+  },
+  {
+    "name": "ros2-iceoryx-hoofs",
+    "version": "2.95.8",
+    "build": "py314h02e3bbf_20"
+  },
+  {
+    "name": "ros2-iceoryx-posh",
+    "version": "2.95.8",
+    "build": "py314h02e3bbf_20"
+  },
+  {
+    "name": "ros2-libstatistics-collector",
+    "version": "1.3.4",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-libyaml-vendor",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-lifecycle-msgs",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-nav-msgs",
+    "version": "4.9.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-nav2-msgs",
+    "version": "1.1.20",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-python-cmake-module",
+    "version": "0.10.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl",
+    "version": "5.3.13",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl-action",
+    "version": "5.3.13",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl-interfaces",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl-lifecycle",
+    "version": "5.3.13",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl-logging-interface",
+    "version": "2.3.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcl-logging-spdlog",
+    "version": "2.3.2",
+    "build": "np2py314h1781256_20"
+  },
+  {
+    "name": "ros2-rcl-yaml-param-parser",
+    "version": "5.3.13",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rclcpp",
+    "version": "16.0.19",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rclpy",
+    "version": "3.3.21",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcpputils",
+    "version": "2.4.6",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rcutils",
+    "version": "5.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw",
+    "version": "6.1.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-connextdds",
+    "version": "0.11.6",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-connextdds-common",
+    "version": "0.11.6",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-cyclonedds-cpp",
+    "version": "1.3.4",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-dds-common",
+    "version": "1.6.0",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-fastrtps-cpp",
+    "version": "6.2.10",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-fastrtps-dynamic-cpp",
+    "version": "6.2.10",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-fastrtps-shared-cpp",
+    "version": "6.2.10",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rmw-implementation",
+    "version": "2.8.5",
+    "build": "np2py314hc0fd5b4_20"
+  },
+  {
+    "name": "ros2-rmw-implementation-cmake",
+    "version": "6.1.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ros-environment",
+    "version": "3.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-ros-workspace",
+    "version": "1.0.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosgraph-msgs",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-adapter",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-cli",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-cmake",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-default-generators",
+    "version": "1.2.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-default-runtime",
+    "version": "1.2.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-generator-c",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-generator-cpp",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-generator-py",
+    "version": "0.14.6",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-generator-rs",
+    "version": "0.4.12",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-parser",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-runtime-c",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-runtime-cpp",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-c",
+    "version": "2.0.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-cpp",
+    "version": "2.0.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-fastrtps-c",
+    "version": "2.2.4",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-fastrtps-cpp",
+    "version": "2.2.4",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-interface",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-introspection-c",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rosidl-typesupport-introspection-cpp",
+    "version": "3.1.8",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rpyutils",
+    "version": "0.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-rti-connext-dds-cmake-module",
+    "version": "0.11.6",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-sensor-msgs",
+    "version": "4.9.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-spdlog-vendor",
+    "version": "1.3.1",
+    "build": "np2py314h1781256_20"
+  },
+  {
+    "name": "ros2-statistics-msgs",
+    "version": "1.2.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-std-msgs",
+    "version": "4.9.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-tracetools",
+    "version": "4.1.2",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-trajectory-msgs",
+    "version": "4.9.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "ros2-unique-identifier-msgs",
+    "version": "2.2.1",
+    "build": "np2py314h53a0733_20"
+  },
+  {
+    "name": "setuptools",
+    "version": "84.0.0",
+    "build": "pyh332efcf_0"
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "build": "pyhe01879c_1"
+  },
+  {
+    "name": "spdlog",
+    "version": "1.17.0",
+    "build": "hb6aa676_2"
+  },
+  {
+    "name": "tinyxml2",
+    "version": "11.0.0",
+    "build": "hee9eb32_1"
+  },
+  {
+    "name": "tk",
+    "version": "8.6.13",
+    "build": "noxft_h1df4ec4_4"
+  },
+  {
+    "name": "tomli",
+    "version": "2.4.1",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "build": "pyhcf101f3_0"
+  },
+  {
+    "name": "tzdata",
+    "version": "2026c",
+    "build": "h151e31d_0"
+  },
+  {
+    "name": "yaml",
+    "version": "0.2.5",
+    "build": "hebe6cf0_3"
+  },
+  {
+    "name": "yaml-cpp",
+    "version": "0.8.0",
+    "build": "h54a6638_1"
+  },
+  {
+    "name": "zipp",
+    "version": "4.1.1",
+    "build": "pyh5ded981_0"
+  },
+  {
+    "name": "zstd",
+    "version": "1.5.7",
+    "build": "hb78ec9c_7"
+  }
+]

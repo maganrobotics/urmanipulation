@@ -11,12 +11,19 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--plan', type=Path, required=True)
     p.add_argument('--output-dir', type=Path, default=Path('community-results/ros2'))
+    p.add_argument('--shared-memory', action='store_true',
+                   help='Use Fast DDS shared memory only, with no UDP/TCP transport')
     args = p.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
     outcomes = []
     for i, (flag, expected) in enumerate([(None, 'passed'), ('--fail-navigation', 'failed'),
                                          ('--fail-manipulation', 'failed')]):
         env = dict(os.environ, ROS_DOMAIN_ID=str(81 + i), ROS_LOCALHOST_ONLY='1')
+        if args.shared_memory:
+            # Humble's localhost flag installs a UDP transport. The explicit
+            # SHM-only profile instead enforces same-host communication by IPC.
+            env.update(ROS_LOCALHOST_ONLY='0', RMW_IMPLEMENTATION='rmw_fastrtps_cpp',
+                       FASTRTPS_DEFAULT_PROFILES_FILE=str(Path(__file__).with_name('fastdds_shm.xml').resolve()))
         server_cmd = [sys.executable, '-m', 'community.ros2_bridge', 'mock-server']
         if flag:
             server_cmd.append(flag)

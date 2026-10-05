@@ -58,6 +58,38 @@ python3 -m community.ros2_bridge mock-server
 python3 -m community.ros2_bridge client --plan community-results/ros2-playback.json
 ```
 
+## Same-host shared-memory verification
+
+For a host that cannot enumerate network interfaces, the checked-in Fast DDS
+profile runs discovery and data exchange using shared memory only:
+
+```bash
+python3 -m community.ros2_verify --shared-memory --plan community-results/ros2-playback.json
+```
+
+This selects `rmw_fastrtps_cpp` and `community/fastdds_shm.xml`, which disables
+built-in transports and configures only SHM. The verifier does not require network
+access for ROS2 traffic in this mode. It uses the same three action tests and the
+same separate client/server processes. Both processes must share the same host's
+shared-memory namespace. This command is not a network or hardware integration test.
+
+The local reference used a separate RoboStack environment on Linux x86_64:
+
+```bash
+micromamba create -n omindos-ros2 -c conda-forge -c robostack-humble \
+  ros-humble-rclpy ros-humble-nav2-msgs ros-humble-control-msgs \
+  ros-humble-nav-msgs ros-humble-rmw-fastrtps-cpp
+micromamba run -n omindos-ros2 python -m community.ros2_verify \
+  --shared-memory --plan community-results/ros2-playback.json
+```
+
+Do not source an apt-installed ROS environment into the RoboStack environment.
+The observed package versions are recorded in the validation report. The original
+system ROS2/Ubuntu 22.04 commands above remain a separate verification route.
+
+Sources: [RoboStack installation](https://robostack.github.io/micromamba.html),
+[Fast DDS shared memory](https://fast-dds.docs.eprosima.com/en/2.x/fastdds/transport/shared_memory/shared_memory.html).
+
 ## Scope and production integration
 
 The mock server acknowledges accelerated playback, emits stationary mock odometry,

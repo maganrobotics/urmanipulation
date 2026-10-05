@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "cases_passed": 3,
+  "recorded_at_utc": "2026-10-05T21:25:53.906463+00:00",
+  "source_commit": "7311d535e170df0edda0882165602c10b137b4bc",
+  "additional_change": "community/ros2_verify.py --shared-memory and community/fastdds_shm.xml",
+  "environment": {
+    "os": "Ubuntu 24.04 Linux x86_64",
+    "distribution": "ROS2 Humble (RoboStack)",
+    "python": "3.14.7",
+    "rclpy": "3.3.21",
+    "fastdds": "2.6.11",
+    "rmw": "rmw_fastrtps_cpp"
+  },
+  "transport": "Fast DDS shared memory only; distinct client and server processes",
+  "command": "python -m community.ros2_verify --shared-memory --plan community-results/ros2-playback.json --output-dir community-results/ros2-shm-only",
+  "scope": "Actual ROS2 action messages and results against mock capability servers; no hardware",
+  "network_udp": "not validated; getifaddrs denied on local host; GitHub job queued",
+  "cases": [
+    {
+      "case": "success",
+      "result": {
+        "status": "passed",
+        "transport": "ROS2",
+        "mock": true,
+        "task_history": [
+          "idle",
+          "navigating",
+          "ready",
+          "manipulating",
+          "succeeded"
+        ]
+      }
+    },
+    {
+      "case": "--fail-navigation",
+      "result": {
+        "status": "failed",
+        "error": "Manipulation requires successful navigation and a stopped base",
+        "task_history": [
+          "idle",
+          "navigating",
+          "failed"
+        ]
+      }
+    },
+    {
+      "case": "--fail-manipulation",
+      "result": {
+        "status": "failed",
+        "error": "Manipulation action failed",
+        "task_history": [
+          "idle",
+          "navigating",
+          "ready",
+          "manipulating",
+          "failed"
+        ]
+      }
+    }
+  ]
+}

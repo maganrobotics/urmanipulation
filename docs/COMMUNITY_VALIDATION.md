@@ -20,12 +20,31 @@ Community pins. Commands: `python -m community.verify`,
 | Dependency integrity | `pip check` reports no broken requirements |
 | Geometry rendering | Panda3D TinyOffscreen rendered the full dual-arm mesh successfully; image visually inspected |
 | Desktop window/input | Not tested: this host has no desktop display |
-| ROS2 action transport | Awaiting the dedicated Humble CI job; this local host has no ROS2 installation |
+| ROS2 action transport, same-host IPC | Pass; 3/3 actual Action checks on RoboStack Humble / Python 3.14.7 / Fast DDS 2.6.11, with shared-memory-only transport |
+| ROS2 UDP network transport | Not validated locally: interface enumeration is denied; GitHub Humble job remains queued |
 | Physical hardware / C++ Navigation stack | Not tested |
 
 Machine-readable results: [Linux report](validation/linux-py312.json).
 Observed package versions: [environment snapshot](validation/pip-freeze-linux-py312.txt).
+ROS2 results: [three Action cases](validation/ros2-humble-shm.json).
+ROS2 package snapshot: [RoboStack environment](validation/ros2-humble-packages.json).
 The CI workflow preserves per-demo logs and JSON plus ROS2 results as build artifacts.
+
+## ROS2 follow-up
+
+The normal local-only UDP discovery attempt failed with `getifaddrs: Operation not
+permitted` before the client could discover the server. An isolated RoboStack Humble
+environment was then tested with Fast DDS's explicit shared-memory-only XML profile:
+no UDP/TCP transport is configured. Three separate-process tests passed:
+
+1. Navigation succeeds, a new stopped-base observation arrives, and the arm action succeeds.
+2. Navigation aborts and the task fails without starting manipulation.
+3. Manipulation aborts and the task reports failure.
+
+This verifies real ROS2 serialization, discovery, actions, feedback and results over
+same-host IPC against mock capability servers. It does not validate UDP networking,
+physical devices, or the actual C++ Navigation stack. The Ubuntu 22.04 system-ROS2
+CI job is still queued; local RoboStack results must not be reported as a CI pass.
 
 ## Issues found and handled
 

@@ -38,12 +38,14 @@ requirements, assets, app directories and core numerical algorithms are retained
 - [x] Dependency integrity and task-contract regression checks pass.
 - [x] Model meshes load and dual-arm geometry renders offscreen.
 - [x] README commands, attribution and release boundaries reviewed.
-- [ ] ROS2 Humble transport CI run recorded (see current validation report).
+- [x] Real ROS2 Humble Action transport: success and two injected failures pass using same-host shared memory.
+- [ ] Independent Ubuntu 22.04 / ROS2 Humble UDP CI verification remains queued.
 - [ ] Optional desktop OS acceptance; physical robots are outside v0.1 scope.
 
 See [exact verification results](COMMUNITY_VALIDATION.md). No final tag or public
 GitHub Release is created merely by preparing this candidate. After the branch's
-required checks pass, maintainers can review and tag the source snapshot as `v0.1`.
+CI check completes, maintainers can review and tag the source snapshot as `v0.1`.
+The runnable Community source and local simulation/ROS2 IPC verification are complete.
 
 ## Known limits
 

@@ -41,3 +41,11 @@ Historical embedded Qt applications need their own environment.
 vision/hardware packages and Windows-only dependencies; it is not the Community installer.
 Windows, macOS, historical application demos and hardware drivers have not been
 validated by the Community v0.1 suite.
+
+## Separate ROS2 verification environment
+
+Actual Action transport was checked with RoboStack ROS2 Humble, CPython 3.14.7,
+rclpy 3.3.21 and Fast DDS 2.6.11 in an isolated environment. It does not share the
+NumPy/Panda3D simulation venv. The exported JSON playback is the interface between
+the two environments. See [ROS2 commands](ROS2_INTERFACE.md) and
+[recorded results](validation/ros2-humble-shm.json).
