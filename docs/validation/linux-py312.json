@@ -1,0 +1,108 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "results": [
+    {
+      "demo": "01-quick-start",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "position_error_m": 0.0011223335386683505,
+      "rotation_matrix_error": 0.0009962815020634357,
+      "elapsed_s": 2.76
+    },
+    {
+      "demo": "02-ur3e",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "position_error_m": 0.0009040965560678886,
+      "rotation_matrix_error": 0.0024497656949837533,
+      "joints_rad": [
+        0.24776657360759466,
+        -0.7998318496553698,
+        1.0500234137223396,
+        0.2995393159911689,
+        0.6989568451155554,
+        -0.09948614641322975
+      ],
+      "collision_links": 7,
+      "elapsed_s": 3.52
+    },
+    {
+      "demo": "03-grasping",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "candidates": 6,
+      "jaw_width_m": 0.065,
+      "scope": "Geometric candidates; contact forces and force closure are not simulated",
+      "elapsed_s": 6.06
+    },
+    {
+      "demo": "04-rrt-connect",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "validated_samples": 283,
+      "edge_step_rad": 0.025,
+      "blocking_obstacle_detected": true,
+      "elapsed_s": 4.21
+    },
+    {
+      "demo": "05-fixed-dual-arm",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "validated_samples": 5,
+      "joints": 12,
+      "scope": "Synchronized kinematics; no closed-chain object constraint",
+      "elapsed_s": 5.5
+    },
+    {
+      "demo": "06-mobile-dual-arm",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "validated_base_samples": 31,
+      "navigation": "mock",
+      "transport": "in-process",
+      "task_history": [
+        "idle",
+        "navigating",
+        "ready"
+      ],
+      "scope": "Base transform and collision checks; no Nav2 or base dynamics in this mode",
+      "elapsed_s": 4.4
+    },
+    {
+      "demo": "07-integrated-task",
+      "status": "passed",
+      "mode": "simulation",
+      "seed": 7,
+      "navigation": "mock",
+      "base_samples": 31,
+      "arm_path_samples": [
+        389,
+        402
+      ],
+      "placement_error_m": [
+        6.105769512905777e-08,
+        4.099280075338155e-08
+      ],
+      "objects_released": 2,
+      "task_history": [
+        "idle",
+        "navigating",
+        "ready",
+        "manipulating",
+        "succeeded"
+      ],
+      "scope": "Sequential two-arm geometric transfer; no perception, contact dynamics or handover",
+      "elapsed_s": 4.68
+    }
+  ],
+  "status": "passed",
+  "ros2_transport": "run community.ros2_verify separately on a sourced ROS2 host",
+  "hardware": "not tested"
+}

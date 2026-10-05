@@ -240,7 +240,7 @@ def color_to_float(color, dtype=None):
     if dtype.kind in 'ui':
         signed = int(dtype.kind == 'i')
         color_max = float((2 ** ((dtype.itemsize * 8) - signed)) - 1)
-        color = color.astype(np.float) / color_max
+        color = color.astype(float) / color_max
     return color
 
 
@@ -294,7 +294,7 @@ def face_to_vertex_color(mesh, face_colors, dtype=COLOR_DTYPE):
     color_dim = np.shape(face_colors)[1]
 
     vertex_colors = np.zeros((len(mesh.vertices), 3, color_dim))
-    population = np.zeros((len(mesh.vertices), 3), dtype=np.bool)
+    population = np.zeros((len(mesh.vertices), 3), dtype=bool)
 
     vertex_colors[[mesh.faces[:, 0], 0]] = face_colors
     vertex_colors[[mesh.faces[:, 1], 1]] = face_colors

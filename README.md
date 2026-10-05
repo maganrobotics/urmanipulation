@@ -1,219 +1,128 @@
-# OmindOS Manipulation Community
+# OmindOS Manipulation Community v0.1
 
-**Community edition for learning robot manipulation, motion planning, grasping, and dual-arm coordination.**
+Simulation examples for learning UR3e kinematics, grasping, collision checking,
+RRT-Connect, fixed dual arms and mobile manipulation task composition.
 
-This repository is the community learning edition of the manipulation stack used as a foundation for **OmindOS Manipulation**. It is intended for education, research, prototyping, and community experimentation.
+**Status: v0.1 release candidate.** The seven Community examples (the original
+Quick Start plus six new demos) run in a documented Linux/Python environment.
+Navigation in the offline mobile examples is explicitly simulated. Physical
+robots, contact dynamics and production deployment are outside this release.
+See [verification results](docs/COMMUNITY_VALIDATION.md) for the exact tested scope.
 
-> **Status:** Community v0.1 — the first community release focuses on making the existing UR3e simulation and planning examples easier to understand and explore. The underlying algorithms are intentionally kept close to the original project at this stage.
+## Start here
 
-## What you can learn
+```bash
+git clone --branch community-v0.1 https://github.com/maganrobotics-boop/urmanipulation.git
+cd urmanipulation
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-community.txt
+python -m community.verify
+```
 
-A suggested learning path is:
+The verified reference environment is Ubuntu 24.04, CPython 3.12, NumPy 1.26.4
+and Panda3D 1.10.15. `requirements-community.txt` is for these demos;
+`requirements.txt` preserves the historical application environment.
+Windows and macOS have not been verified. See [environment notes](docs/ENVIRONMENT.md).
 
-1. **Robot basics and kinematics** — coordinate frames, joint chains, forward/inverse kinematics.
-2. **Robot simulation** — build and visualize robot models with Panda3D.
-3. **Grasping** — define grippers, grasp poses, and grasp candidates.
-4. **Collision checking** — reason about robot, object, and environment collisions.
-5. **Motion planning** — generate collision-aware motions, including RRT-Connect examples.
-6. **Dual-arm manipulation** — explore handover and coordinated manipulation.
-7. **Integrated manipulation** — study a complete dual-arm manipulation / digital-twin example.
+To open a visualization window on a desktop:
+
+```bash
+python -m community.ur3e_single_arm
+```
+
+Add `--headless` to compute and check results without a display. Each demo supports
+`--seed 7` and `--output community-results/result.json`. A failure exits nonzero.
+Run the module commands from the repository root; the original
+`python community/quick_start.py --headless` entry point also remains available.
+
+## Community Demos
+
+| Demo | Command after `python -m community.` | What it actually checks | Offline status |
+|---|---|---|---|
+| 01 — Quick Start | `quick_start --headless` | Joint chain, target → IK → FK residual | Verified |
+| 02 — UR3e Single Arm | `ur3e_single_arm --headless` | UR3e meshes, six joints, TCP, IK and self collision | Verified |
+| 03 — Grasping | `grasping --headless` | Robotiq85 grasp candidates on a generated box, mesh collision filtering | Verified |
+| 04 — RRT-Connect | `motion_planning --headless` | Original planner, obstacle detection, endpoints, joint limits and densely sampled edges | Verified |
+| 05 — Fixed Dual Arm | `dual_arm --headless` | Twelve-joint coordinated motion and original dual-arm collision model | Verified |
+| 06 — Mobile Dual Arm | `mobile_dual_arm --headless` | Simulated base route, rigid transforms, collision checks, navigation result gate | Verified; mock navigation |
+| 07 — Integrated Task | `integrated_task --headless` | Simulated navigation, geometric grasps, two sequential arm plans, attached objects, release | Verified; mock navigation |
+
+The mobile example relocates the existing dual-arm rig as a kinematic assembly;
+it does not add a wheel model, localization, or a mobile-base dynamics engine.
+The integrated task begins with boxes at known reachable grasp poses. It does not
+claim perception, approach planning, contact-force simulation, or a dual-arm handover.
+
+Follow the [demo walkthrough](community/README.md) and [learning path](docs/LEARNING_PATH.md).
+
+## ROS2 interface: Navigation C++, Manipulation Python
+
+Navigation remains ROS2/C++; manipulation remains Python. They exchange goals,
+results and state through standard ROS2 interfaces. No language rewrite is required.
+
+| Capability | ROS2 interface | Community endpoint |
+|---|---|---|
+| Navigation goal and result | `nav2_msgs/action/NavigateToPose` | `/omindos/community/navigate_to_pose` |
+| Ordered twelve-joint playback | `control_msgs/action/FollowJointTrajectory` | `/omindos/community/follow_joint_trajectory` |
+| Base pose and stopped-state evidence | `nav_msgs/msg/Odometry` | `/omindos/community/odom` |
+
+The repository includes a Python action client and an **isolated mock action server**.
+It exports an offline checked trajectory, sends a navigation action, requires a fresh
+stopped-base observation, then sends the arm trajectory. This is a transport exercise:
+the mock server acknowledges accelerated playback and does not drive a controller.
+Gripper attachment/release remains in the offline geometric demo.
+
+See [ROS2 setup, commands and limits](docs/ROS2_INTERFACE.md). The GitHub verification
+workflow separately checks numerical simulation and real ROS2 message transport.
+Use the documented validation status before treating either as verified on your host.
 
 ## Repository map
 
-The current codebase contains the original research and teaching modules. Important starting points include:
-
 ```text
-basis/              Mathematical and geometry utilities
-grasping/           Grasp-related algorithms and utilities
-manipulation/       Manipulation and placement functionality
-motion/             Motion-related functionality
-motionplanning/     Motion-planning algorithms
-robot_sim/          Robot simulation models
+community/          Community entry points, adapters, validation and ROS2 mock bridge
+basis/              Original mathematical and geometry utilities
+robot_sim/          Original robot, joint-chain and gripper models
 modeling/           Geometric and collision models
-visualization/      Visualization utilities
-pandaplotutils/     Panda3D-related visualization utilities
-0000_examples/      Runnable examples
-0000_book/          Learning-oriented examples
-app/                Integrated application demos
+grasping/           Grasp annotation and planning
+motion/             Current motion/planning modules used by Community demos
+motionplanning/     Historical motion-planning modules
+visualization/      Panda3D visualization
+0000_examples/      Historical examples
+0000_book/          Historical teaching examples
+app/                Integrated research/hardware applications
+docs/               Installation, learning, interface and validation notes
 ```
 
-Some directory names differ from descriptions in older documentation. This map follows the current repository structure.
-
-## Quick start
-
-### 1. Clone the community repository
-
-```bash
-git clone https://github.com/maganrobotics-boop/urmanipulation.git
-cd urmanipulation
-```
-
-For the v0.1 development snapshot:
-
-```bash
-git checkout community-v0.1
-```
-
-### 2. Create a Python environment
-
-A dedicated virtual environment is recommended. Install the project dependencies from:
-
-```bash
-pip install -r requirements.txt
-```
-
-The existing project uses Panda3D for visualization and includes scientific-computing, geometry, vision, and planning dependencies.
-
-> The repository is an evolving research/education codebase rather than a polished binary distribution. Dependency compatibility can vary by Python version and operating system. Community v0.1 will progressively improve reproducibility.
-
-### 3. Run the Community Quick Start
-
-From the repository root:
-
-```bash
-python community/quick_start.py
-```
-
-This simulation-only example introduces the basic target pose → IK → joint configuration → FK → visualization loop. See [`community/README.md`](community/README.md) for the walkthrough.
-
-### 4. Continue with the existing simulation examples
-
-Explore `0000_examples/` and `0000_book/` before connecting any physical robot.
-
-Representative examples in the existing project include:
-
-- Bullet / dynamics examples
-- grasp definition examples
-- dual-arm handover examples
-- UR3e dual-arm simulation
-- robot-math and grasp-planning examples
-- RRT-Connect motion-planning examples
-
-For an integrated example, see the demos under `app/`, including the existing roller-hole docking / dual-arm manipulation workflow where available in the current tree.
-
-## Community Demos — from basics to dual-arm manipulation
-
-The Community edition is organized around progressive demos so learners can move from a minimal simulation toward complete manipulation tasks.
-
-| Demo | Topic | What you learn | Status |
-|---|---|---|---|
-| **Demo 01 — Quick Start** | Kinematics | target pose → IK → joint configuration → FK → visualization | Available |
-| **Demo 02 — UR3e Single Arm** | Manipulator basics | UR3e model, joint motion, TCP and end-effector pose | Planned for v0.1 |
-| **Demo 03 — Grasping** | Robot grasping | gripper model, grasp pose and grasp candidates | Planned for v0.1 |
-| **Demo 04 — Motion Planning** | RRT-Connect | collision-aware path planning from start to goal | Planned for v0.1 |
-| **Demo 05 — Dual-arm Coordination** | Dual-arm manipulation | two-arm configuration, handover and coordinated motion | Planned for v0.1 |
-| **Demo 06 — Mobile Dual-arm Manipulation** | Mobile manipulation | connect a ROS2/C++ mobile base with Python dual-arm manipulation through stable ROS2 interfaces | Planned |
-| **Demo 07 — Integrated Task** | Complete manipulation workflow | combine navigation, grasping, planning, collision checking and dual-arm manipulation | Planned |
-
-Start here:
-
-```bash
-python community/quick_start.py
-```
-
-Then follow [`community/README.md`](community/README.md) and [`docs/LEARNING_PATH.md`](docs/LEARNING_PATH.md).
-
-The original examples remain available under `0000_examples/`, `0000_book/`, and `app/`. Community demos provide a cleaner learning layer on top of them rather than replacing the upstream research code.
-
-## Community learning route
-
-| Stage | Topic | Goal |
-|---|---|---|
-| 01 | Robot model | Understand links, joints, frames, and robot representation |
-| 02 | Kinematics | Move from joint configurations to end-effector poses and back |
-| 03 | Grasping | Generate and inspect grasp candidates |
-| 04 | Collision | Check whether a planned state is physically feasible |
-| 05 | Planning | Generate collision-aware robot motion |
-| 06 | Dual arm | Coordinate two manipulators and study handover |
-| 07 | Integrated task | Combine perception/modeling, planning, and manipulation |
-
-The long-term Community goal is to make each stage independently runnable and suitable for coursework, self-study, and research prototyping.
+Historical examples are retained and are **not all verified**. Community does not
+rename the upstream source tree or import hardware drivers. The original research
+IK, geometry and RRT algorithms remain in place; small Python/NumPy compatibility
+edits are itemized in [the release notes](docs/RELEASE_v0.1.md).
 
 ## Real robots
 
-**Start in simulation.**
-
-The Community repository should not be treated as a plug-and-play safety controller for a physical industrial manipulator. Before running generated motions on a real robot, independently validate joint limits, collision constraints, workspace safety, emergency-stop behavior, payload/tool configuration, and the manufacturer's operating requirements.
-
-Hardware adapters and deployment-specific interfaces can evolve separately from the community learning examples.
-
-## Mobile Dual-arm Architecture
-
-OmindOS does **not** require every robotics module to use the same programming language. The integration contract is ROS2.
-
-```text
-                  OmindOS
-                     |
-        +------------+------------+
-        |                         |
-Navigation Community       Manipulation Community
-    ROS2 / C++                    Python
-        |                         |
- localization / mapping      grasping / planning
- navigation / base control   single & dual-arm control
-        |                         |
-        +------------+------------+
-                     |
-             ROS2 Interface Layer
-                     |
-          Mobile Dual-arm Robot
-```
-
-The design principle is **interface unification, not language unification**:
-
-- Navigation can remain ROS2/C++ for localization, mapping, navigation, and base control.
-- Manipulation can remain Python for kinematics, grasping, motion planning, dual-arm coordination, and higher-level experimentation.
-- A Python ROS2 adapter (`rclpy`) can expose manipulation capabilities as ROS2 topics, services, and actions.
-- Mobile manipulation composes both sides through stable ROS2 contracts rather than merging both codebases into one language.
-
-A future OmindOS integration layer should standardize robot pose/state, navigation goals and results, manipulation goals and results, task status, collision/safety state, and recovery behavior. This allows Navigation and Manipulation implementations to evolve independently while remaining interoperable.
-
-## OmindOS
-
-OmindOS is being organized as modular robot capabilities. This repository represents the **Manipulation Community** track:
-
-```text
-OmindOS Navigation Community
-        +
-OmindOS Manipulation Community
-        ↓
-Mobile Manipulation / Embodied Robot Applications
-```
-
-The Community edition is intended to remain useful on its own for learning and experimentation. Product-specific integrations, hardware deployment, validation, and support may be maintained separately.
+Start in simulation. This release is not a physical-robot safety controller.
+Hardware integration needs its own driver mapping, joint limits, tool/payload
+calibration, collision validation and manufacturer-required safety checks.
 
 ## Project origin and attribution
 
-This repository is derived from the **Universal Robots UR3e Planning & Control System** and originates from work based on / inspired by the **WRS** robotics software developed by **Weiwei Wan and collaborators at Osaka University**.
+This repository is derived from the **Universal Robots UR3e Planning & Control System**
+and originates from work based on / inspired by the **WRS** robotics software developed
+by **Weiwei Wan and collaborators at Osaka University**.
 
-The original repository license and attribution are intentionally preserved. Please retain the applicable copyright and license notices when redistributing derived work.
+The original repository license, source author comments and attribution are preserved.
+Please retain the applicable notices when redistributing derived work. Original WRS
+and UR3e work is not reattributed to OriginMind.
 
-## License
+## License and contributing
 
-This repository is distributed under the **MIT License**. See [LICENSE](LICENSE).
-
-The existing LICENSE identifies:
+This repository is distributed under the **MIT License**. See [LICENSE](LICENSE):
 
 > Copyright (c) 2020 Weiwei Wan
 
-Community documentation and later contributions do not remove or replace the original copyright notice.
+Community documentation and later contributions do not remove or replace this notice.
+OmindOS Community additions are maintained by OriginMind under the same MIT license.
 
-## Contributing
-
-Community contributions are welcome, particularly:
-
-- reproducible installation instructions;
-- verified examples;
-- bug fixes;
-- clearer learning materials;
-- robot-model adapters;
-- simulation examples;
-- manipulation and motion-planning improvements.
-
-For substantial changes, prefer a focused issue or pull request with a runnable example and a short explanation of the expected behavior.
-
----
-
-**OmindOS Manipulation Community v0.1**
-
-Learn in simulation. Validate before hardware. Build reusable robot manipulation capabilities.
+Contributions should include a reproducible command, environment details and the
+expected output. Run `python -m community.verify` and
+`python -m unittest community.test_contract` before proposing changes to a demo.

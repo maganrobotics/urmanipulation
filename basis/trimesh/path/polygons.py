@@ -112,7 +112,7 @@ def rasterize_polygon(polygon, pitch, angle=0, return_points=False):
     bounds = np.reshape(p.bounds, (2,2))
     offset = bounds[0]
     shape  = np.ceil(np.ptp(bounds, axis=0)/pitch).astype(int)
-    grid   = np.zeros(shape, dtype=np.bool)
+    grid   = np.zeros(shape, dtype=bool)
 
     def fill(ranges):
         ranges  = (np.array(ranges) - offset[0]) / pitch

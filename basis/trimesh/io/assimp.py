@@ -18,7 +18,7 @@ def load_assimp(file_obj, file_type=None):
     '''
 
     def LPMesh_to_Trimesh(lp):
-        colors = (np.reshape(lp.colors, (-1,4))[:,0:3] * 255).astype(np.int)
+        colors = (np.reshape(lp.colors, (-1,4))[:,0:3] * 255).astype(int)
         return {'vertices'       : lp.vertices,
                 'vertex_normals' : lp.normals,
                 'faces'          : lp.faces,

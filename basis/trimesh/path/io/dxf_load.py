@@ -56,7 +56,7 @@ def load_dxf(file_obj):
         e = dict(e_data)
         entities.append(Line(len(vertices) + np.arange(2)))
         vertices.extend(np.array([[e['10'], e['20']],
-                                  [e['11'], e['21']]], dtype=np.float))        
+                                  [e['11'], e['21']]], dtype=float))
     def convert_circle(e_data):
         e = dict(e_data)
         R = float(e['40'])
@@ -68,14 +68,14 @@ def load_dxf(file_obj):
     def convert_arc(e_data):
         e = dict(e_data)
         R = float(e['40'])
-        C = np.array([e['10'], e['20']], dtype=np.float)
-        A = np.radians(np.array([e['50'], e['51']], dtype=np.float))
+        C = np.array([e['10'], e['20']], dtype=float)
+        A = np.radians(np.array([e['50'], e['51']], dtype=float))
         points = angles_to_threepoint(A, C[0:2], R)
         entities.append(Arc(len(vertices) + np.arange(3), closed=False))
         vertices.extend(points)
     def convert_polyline(e_data):
         e     = multi_dict(e_data)
-        lines = np.column_stack((e['10'], e['20'])).astype(np.float)
+        lines = np.column_stack((e['10'], e['20'])).astype(float)
         entities.append(Line(np.arange(len(lines))+len(vertices)))
         vertices.extend(lines)
 
@@ -83,7 +83,7 @@ def load_dxf(file_obj):
         # in the DXF there are n points and n ordered fields 
         # with the same group code 
         e      = multi_dict(e_data)
-        points = np.column_stack((e['10'], e['20'])).astype(np.float)
+        points = np.column_stack((e['10'], e['20'])).astype(float)
         knots  = np.array(e['40']).astype(float)
         # check euclidean distance to see if closed
         closed = np.linalg.norm(points[0] - points[-1]) < tol.merge

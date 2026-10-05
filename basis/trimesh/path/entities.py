@@ -40,7 +40,7 @@ class Entity(object):
         If two identical entities exist, they can be removed
         by comparing the string returned by this function.
         '''
-        hash = np.zeros(_HASH_LENGTH, dtype=np.int)
+        hash = np.zeros(_HASH_LENGTH, dtype=int)
         hash[-2:] = self._class_id, int(self.closed)
         points_count = np.min([3, len(self.points)])
         hash[0:points_count] = np.sort(self.points)[-points_count:]

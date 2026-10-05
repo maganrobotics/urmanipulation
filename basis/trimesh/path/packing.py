@@ -90,7 +90,7 @@ def pack_rectangles(rectangles, sheet_size, shuffle=False):
     density_escape: float, at what density should the loop exit early and return. A value of zero will return immediately after a single rectangle is placed, and a value of >= 1.0 will always traverse the entire list of smaller rectangles.
     '''
     offset    = np.zeros((len(rectangles), 2))
-    inserted  = np.zeros( len(rectangles), dtype=np.bool)
+    inserted  = np.zeros( len(rectangles), dtype=bool)
     box_order = np.argsort(np.sum(rectangles**2, axis=1))[::-1]
     area      = 0.0
     density   = 0.0

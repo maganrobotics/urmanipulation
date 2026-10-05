@@ -91,7 +91,7 @@ class RRT(object):
             if self._is_collided(component_name, new_conf, obstacle_list, otherrobot_list):
                 return nearest_nid
             else:
-                new_nid = random.randint(0, 1e16)
+                new_nid = random.randint(0, 10**16)
                 roadmap.add_node(new_nid, conf=new_conf)
                 roadmap.add_edge(nearest_nid, new_nid)
                 nearest_nid = new_nid

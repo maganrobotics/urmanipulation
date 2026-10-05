@@ -1,0 +1,49 @@
+name: Community verification
+on:
+  push:
+    branches: [community-v0.1]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-community.txt
+      - run: python -m pip install -r requirements-community.txt
+      - run: python -m unittest community.test_contract
+      - run: python -m community.verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: community-simulation
+          path: community-results/
+  ros2-transport:
+    needs: simulation
+    runs-on: ubuntu-22.04
+    container: ros:humble-ros-base
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: community-simulation
+          path: community-results/
+      - run: apt-get update -qq && apt-get install -y ros-humble-nav2-msgs ros-humble-control-msgs
+      - shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          python3 -m unittest community.test_contract
+          python3 -m community.ros2_verify --plan community-results/ros2-playback.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: community-ros2
+          path: community-results/ros2/

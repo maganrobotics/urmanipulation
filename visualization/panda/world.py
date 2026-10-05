@@ -16,9 +16,7 @@ import visualization.panda.anime_info as ani
 import platform
 
 # Local imports
-from QPanda3D.QMouseWatcherNode import QMouseWatcherNode
-from PyQt5.QtWidgets import *
-from QPanda3D.Panda3DWorld import Panda3DWorld
+# Qt embedding is optional; standalone simulation does not need QPanda3D.
 
 
 class World(ShowBase, object):
@@ -449,7 +447,9 @@ class World(ShowBase, object):
         drawnScene.setColor(1, 1, 1, 0)
         drawnScene.setShader(Shader.make(outline_sha, Shader.SL_Cg))
 
-    def set_parent(self, parent: QWidget):
+    def set_parent(self, parent):
+        from QPanda3D.QMouseWatcherNode import QMouseWatcherNode
+
         self.parent = parent
         self.mouseWatcherNode = QMouseWatcherNode(parent)
 

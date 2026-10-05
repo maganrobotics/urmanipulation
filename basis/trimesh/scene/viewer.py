@@ -120,7 +120,7 @@ class SceneViewer(pyglet.window.Window):
         self.view['ball'].down([x, -y])
 
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
-        delta = np.array([dx, dy], dtype=np.float) / [self.width, self.height]
+        delta = np.array([dx, dy], dtype=float) / [self.width, self.height]
         # left mouse button, with control key down (pan)
         if ((buttons == pyglet.window.mouse.LEFT) and
                 (modifiers & pyglet.window.key.MOD_CTRL)):

@@ -267,7 +267,7 @@ def merge_colinear(points, scale=None):
     colinear = (direction_diff * direction_norm[1:]) < (tol.merge * scale)
     colinear_index = np.nonzero(colinear)[0]
 
-    mask = np.ones(len(points), dtype=np.bool)
+    mask = np.ones(len(points), dtype=bool)
     # since we took diff, we need to offset by one
     mask[colinear_index + 1] = False
     merged = points[mask]

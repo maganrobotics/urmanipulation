@@ -1,38 +1,43 @@
-# Environment Notes — Community v0.1
+# Community v0.1 environment
 
-The repository currently contains a historical pinned `requirements.txt` from the original development environment. It includes a broad Jupyter/scientific stack and Windows-specific packages such as `pywin32`.
+## Verified reference
 
-For that reason, **do not interpret `requirements.txt` as a promise that every modern Python/OS combination installs cleanly**.
+Ubuntu 24.04 (Linux x86_64), CPython 3.12.14, using a fresh virtual environment.
+Direct dependencies are pinned in `requirements-community.txt`. The full observed
+package list is recorded in `docs/validation/pip-freeze-linux-py312.txt`.
+That record is an environment snapshot, not a portable cross-platform lockfile.
 
-## Conservative setup
-
-For the first Community release:
-
-1. Use an isolated virtual environment.
-2. Keep the original `requirements.txt` unchanged for reproducibility/history.
-3. Start from simulation-only examples.
-4. Record the exact Python version and OS when an example is confirmed working.
-5. Do not connect a physical robot merely because a simulation launches successfully.
-
-## Dependency cleanup plan
-
-A later Community update should split dependencies into smaller groups, for example:
-
-```text
-core / simulation
-vision
-notebooks
-hardware
-development
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-community.txt
+python -m pip check
+python -m community.verify
 ```
 
-This should be done only after representative examples have been tested so dependency cleanup does not silently break upstream functionality.
+Open3D is an existing eager import in the original geometry layer, so its relatively
+large wheel and dependencies are still installed even for the small Community demos.
+Panda3D and all model meshes are required in headless mode too: it computes actual
+model/collision geometry, not a stub calculation. A display is unnecessary for
+`--headless`; desktop mode requires a functioning graphical session/OpenGL setup.
 
-## Known v0.1 limitations
+No QPanda3D/PyQt5 install is required for standalone simulation. The original optional
+Qt embedding entry point imports QPanda3D only when `World.set_parent` is called.
+Historical embedded Qt applications need their own environment.
 
-- The dependency set dates from an older Python ecosystem.
-- Some examples use relative paths and assume a particular working directory.
-- Some application examples depend on assets, datasets, or hardware-specific context.
-- Example verification is being added incrementally.
+## Troubleshooting
 
-These limitations are documented rather than hidden so learners can distinguish an algorithm example from a supported deployment configuration.
+- `No module named community` or `basis`: run `python -m community.<demo>` from the repository root.
+- No display: add `--headless`. It does not exercise desktop input/window behavior.
+- Missing DAE/STL: clone the full repository; do not copy only the Python demo files.
+- NumPy 2 or old unpinned dependencies: recreate the virtual environment from the Community requirements.
+- Missing `pkg_resources`: use the pinned setuptools 80.9.0; the vendored historical mesh loader still uses it.
+- ROS2 `rclpy` missing: source ROS2 and use its system Python for the standalone transport module.
+  A ROS2 Humble binary built for Python 3.10 cannot be imported by the Python 3.12 simulation venv.
+
+## Historical and unverified environments
+
+`requirements.txt` is preserved unchanged. It includes 2021 versions, notebooks,
+vision/hardware packages and Windows-only dependencies; it is not the Community installer.
+Windows, macOS, historical application demos and hardware drivers have not been
+validated by the Community v0.1 suite.

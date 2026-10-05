@@ -158,7 +158,7 @@ class Path(object):
         self.entities = np.array(self.entities)[kept]
 
     def remove_invalid(self):
-        valid = np.array([i.is_valid for i in self.entities], dtype=np.bool)
+        valid = np.array([i.is_valid for i in self.entities], dtype=bool)
         self.entities = self.entities[valid]
 
     def remove_duplicate_entities(self):
@@ -208,7 +208,7 @@ class Path(object):
         '''
         if path_indexes is None:
             path_indexes = np.arange(len(self.paths))
-        entities_keep = np.ones(len(self.entities), dtype=np.bool)
+        entities_keep = np.ones(len(self.entities), dtype=bool)
         new_vertices = deque()
         new_entities = deque()
         for i in path_indexes:
@@ -552,7 +552,7 @@ class Path2D(Path):
                 polygons[i] = candidate
                 valid[i]    = True
                 discretized[i] = discrete
-            valid = np.array(valid, dtype=np.bool)
+            valid = np.array(valid, dtype=bool)
             polygons = np.array(polygons)[valid]
             discretized = np.array(discretized)
 

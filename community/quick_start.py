@@ -7,7 +7,15 @@ Run from the repository root:
     python community/quick_start.py
 """
 
+from pathlib import Path
+import sys
+
+# Preserve the documented direct-script invocation from any working directory.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 import numpy as np
+from community.common import parser, seed_rng, require, report
 
 import basis.robot_math as rm
 import modeling.geometric_model as gm
@@ -16,8 +24,8 @@ import visualization.panda.world as wd
 
 
 def main():
-    world = wd.World(cam_pos=[1.2, 0.8, 1.0], lookat_pos=[0.15, 0.0, 0.1])
-    gm.gen_frame(length=0.15).attach_to(world)
+    args = parser(__doc__).parse_args()
+    seed_rng(args.seed)
 
     # Build a small educational joint-link chain.
     robot = jlc.JLChain(homeconf=np.zeros(5), name="omindos_quick_start")
@@ -36,13 +44,6 @@ def main():
     target_pos = np.array([0.3, 0.1, 0.0])
     target_rotmat = np.eye(3)
 
-    gm.gen_mycframe(
-        pos=target_pos,
-        rotmat=target_rotmat,
-        length=0.12,
-        thickness=0.008,
-    ).attach_to(world)
-
     joint_values = robot.ik(
         target_pos,
         target_rotmat,
@@ -55,15 +56,18 @@ def main():
         raise RuntimeError("IK did not find a solution for the Quick Start target.")
 
     robot.fk(jnt_values=joint_values)
-    robot.gen_stickmodel(toggle_jntscs=True).attach_to(world)
+    actual_pos, actual_rot = robot.get_gl_tcp()
+    pos_error = float(np.linalg.norm(actual_pos - target_pos))
+    rot_error = float(np.linalg.norm(actual_rot - target_rotmat))
+    require(pos_error < .002 and rot_error < .01, 'Quick Start IK residual exceeds tolerance')
+    report(args, '01-quick-start', position_error_m=pos_error, rotation_matrix_error=rot_error)
+    if not args.headless:
+        world = wd.World(cam_pos=[1.2, .8, 1], lookat_pos=[.15, 0, .1])
+        gm.gen_frame(length=.15).attach_to(world)
+        gm.gen_mycframe(pos=target_pos, rotmat=target_rotmat, length=.12, thickness=.008).attach_to(world)
+        robot.gen_stickmodel(toggle_jntscs=True).attach_to(world)
+        world.run()
 
-    print("OmindOS Manipulation Community Quick Start")
-    print("IK solution:", joint_values)
-    print("A Panda3D window should now show the robot and target frame.")
-    print("Close the window to exit.")
 
-    world.run()
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

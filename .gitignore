@@ -2,3 +2,6 @@
 /.idea/
 *.pyc
 .DS_Store
+
+/.venv/
+/community-results/

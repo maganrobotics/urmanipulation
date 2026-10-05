@@ -39,7 +39,7 @@ class Voxel:
 
 
 def run_to_raw(shape, index_xy, index_z, **kwargs):
-    raw = np.zeros(shape, dtype=np.bool)
+    raw = np.zeros(shape, dtype=bool)
     for xy, z in zip(index_xy, index_z):
         for z_start, z_end in np.reshape(z, (-1, 2)):
             raw[xy[0], xy[1]][z_start:z_end] = True

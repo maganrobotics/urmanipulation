@@ -120,7 +120,7 @@ def export_dxf(path):
         if increment:
             group = np.tile(np.arange(len(three)).reshape((-1,1)), (1,3)) 
         else:
-            group = np.zeros((len(three), 3), dtype=np.int)
+            group = np.zeros((len(three), 3), dtype=int)
         group += [10, 20, 30]
         interleaved = np.dstack((group.astype(str),
                                  three.astype(str))).reshape(-1)

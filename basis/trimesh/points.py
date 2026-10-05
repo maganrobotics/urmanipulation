@@ -209,7 +209,7 @@ def remove_close_pairs(points, radius):
     # there is probably better numpy slicing you could do here
     highest = pairs.ravel()[column + 2 * np.arange(len(column))]
     # mask the vertices by index
-    mask = np.ones(len(points), dtype=np.bool)
+    mask = np.ones(len(points), dtype=bool)
     mask[highest] = False
     if tol.strict:
         # verify we actually did what we said we'd do
@@ -230,8 +230,8 @@ def remove_close_withfaceid(points, face_index, radius):
     """
     from scipy.spatial import cKDTree as KDTree
     tree = KDTree(points)
-    consumed = np.zeros(len(points), dtype=np.bool)
-    unique = np.zeros(len(points), dtype=np.bool)
+    consumed = np.zeros(len(points), dtype=bool)
+    unique = np.zeros(len(points), dtype=bool)
     for i in range(len(points)):
         if consumed[i]: continue
         neighbors = tree.query_ball_point(points[i], r=radius)
@@ -252,7 +252,7 @@ def remove_close_between_two_sets(points_fixed, points_reduce, radius):
     tree_reduce = KDTree(points_reduce)
     reduce_duplicates = tree_fixed.query_ball_tree(tree_reduce, r=radius)
     reduce_duplicates = np.unique(np.hstack(reduce_duplicates).astype(int))
-    reduce_mask = np.ones(len(points_reduce), dtype=np.bool)
+    reduce_mask = np.ones(len(points_reduce), dtype=bool)
     reduce_mask[reduce_duplicates] = False
     points_clean = points_reduce[reduce_mask]
     return points_clean
