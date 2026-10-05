@@ -3,9 +3,10 @@
 Simulation examples for learning UR3e kinematics, grasping, collision checking,
 RRT-Connect, fixed dual arms and mobile manipulation task composition.
 
-**Status: v0.1 release candidate.** The seven Community examples (the original
-Quick Start plus six new demos) run in a documented Linux/Python environment.
-ROS2 Action communication has also passed three same-host shared-memory checks.
+**Status: v0.1 source ready for release.** The seven Community examples (the original
+Quick Start plus six new demos), five contract tests and three ROS2 Action cases
+passed [GitHub CI](https://github.com/maganrobotics-boop/urmanipulation/actions/runs/37375913047).
+Local ROS2 communication also passed three same-host shared-memory checks.
 Navigation in the offline mobile examples is explicitly simulated. Physical
 robots, contact dynamics and production deployment are outside this release.
 See [verification results](docs/COMMUNITY_VALIDATION.md) for the exact tested scope.
@@ -75,8 +76,9 @@ Gripper attachment/release remains in the offline geometric demo.
 
 See [ROS2 setup, commands and limits](docs/ROS2_INTERFACE.md). The GitHub verification
 workflow separately checks numerical simulation and real ROS2 message transport.
-Local ROS2 IPC validation is complete; the separate GitHub UDP job remains queued.
-Use the documented validation status before treating either as verified on your host.
+Both jobs passed: Ubuntu 24.04/Python 3.12 simulation and Ubuntu 22.04/ROS2 Humble
+standard localhost DDS action communication. The servers are mocks; cross-machine
+networking and the actual C++ Navigation stack remain outside the verified scope.
 
 ## Repository map
 

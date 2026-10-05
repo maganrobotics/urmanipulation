@@ -1,0 +1,189 @@
+{
+  "schema": "omindos.community.ci-evidence.v0.1",
+  "repository": "maganrobotics-boop/urmanipulation",
+  "branch": "community-v0.1",
+  "tested_commit": "44c3e9c85861ada88b0892c93888a6ca760330f5",
+  "run": {
+    "id": 37375913047,
+    "url": "https://github.com/maganrobotics-boop/urmanipulation/actions/runs/37375913047",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-10-05T21:29:21Z"
+  },
+  "jobs": [
+    {
+      "id": 111984527869,
+      "name": "simulation",
+      "conclusion": "success",
+      "environment": "Ubuntu 24.04 / CPython 3.12",
+      "checks": {
+        "contract_tests_passed": 5,
+        "headless_demos_passed": 7
+      },
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run python -m pip install -r requirements-community.txt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m unittest community.test_contract",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run python -m community.verify",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        }
+      ]
+    },
+    {
+      "id": 111985188271,
+      "name": "ros2-transport",
+      "conclusion": "success",
+      "environment": "Ubuntu 22.04 runner / ros:humble-ros-base",
+      "checks": {
+        "contract_tests_passed": 5,
+        "ros2_action_cases_passed": 3
+      },
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Initialize containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run apt-get update -qq && apt-get install -y ros-humble-nav2-msgs ros-humble-control-msgs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run source /opt/ros/humble/setup.bash",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Stop containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        }
+      ]
+    }
+  ],
+  "action_cases": [
+    "navigation success, fresh stopped-base observation, manipulation success",
+    "navigation failure blocks manipulation",
+    "manipulation failure propagates"
+  ],
+  "artifacts": [
+    {
+      "id": 11372140853,
+      "name": "community-simulation",
+      "size_in_bytes": 58113,
+      "digest": "sha256:d70ced8f563f8c932a5056a6967f1ba8f5467cc0be54df1b68834ada08e35b3e",
+      "expires_at": "2027-01-03T21:26:55Z"
+    },
+    {
+      "id": 11371457197,
+      "name": "community-ros2",
+      "size_in_bytes": 1392,
+      "digest": "sha256:5475849cae76c137c61552ed1724ff2f4b4ea7ead7bfaed9698614e42dabd950",
+      "expires_at": "2027-01-03T21:26:55Z"
+    }
+  ],
+  "scope": "Independent headless simulation and same-host ROS2 DDS/Action communication with mock capability servers. Default localhost verifier configuration; payload transport protocol was not separately measured.",
+  "not_tested": [
+    "physical hardware",
+    "actual C++ Navigation stack",
+    "cross-machine networking",
+    "interactive desktop input"
+  ],
+  "provenance": "Results read from GitHub Actions run, jobs, logs and artifact APIs. This documentation/evidence update follows the tested commit without executable-code, dependency or workflow changes."
+}

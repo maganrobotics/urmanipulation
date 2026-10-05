@@ -48,6 +48,11 @@ This runs three actual action-transport cases in isolated ROS domains: success,
 navigation failure (arm must not start), and manipulation failure. Results and logs
 are saved under `community-results/ros2/`.
 
+This command passed all three cases in the independent Ubuntu 22.04 / ROS2 Humble
+[CI run](https://github.com/maganrobotics-boop/urmanipulation/actions/runs/37375913047).
+It verifies same-host DDS discovery and Action communication against mock servers;
+cross-machine networking and the actual C++ Navigation stack were not exercised.
+
 For manual inspection, use the same environment in both terminals:
 
 ```bash

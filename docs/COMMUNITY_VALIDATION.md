@@ -21,7 +21,9 @@ Community pins. Commands: `python -m community.verify`,
 | Geometry rendering | Panda3D TinyOffscreen rendered the full dual-arm mesh successfully; image visually inspected |
 | Desktop window/input | Not tested: this host has no desktop display |
 | ROS2 action transport, same-host IPC | Pass; 3/3 actual Action checks on RoboStack Humble / Python 3.14.7 / Fast DDS 2.6.11, with shared-memory-only transport |
-| ROS2 UDP network transport | Not validated locally: interface enumeration is denied; GitHub Humble job remains queued |
+| Independent simulation CI | Pass; Ubuntu 24.04 / Python 3.12, 7/7 demos and 5 contract tests |
+| Standard localhost ROS2 DDS/action CI | Pass; Ubuntu 22.04 / ROS2 Humble container, 3/3 Action cases and 5 contract tests |
+| Cross-machine ROS2 networking | Not tested |
 | Physical hardware / C++ Navigation stack | Not tested |
 
 Machine-readable results: [Linux report](validation/linux-py312.json).
@@ -29,6 +31,27 @@ Observed package versions: [environment snapshot](validation/pip-freeze-linux-py
 ROS2 results: [three Action cases](validation/ros2-humble-shm.json).
 ROS2 package snapshot: [RoboStack environment](validation/ros2-humble-packages.json).
 The CI workflow preserves per-demo logs and JSON plus ROS2 results as build artifacts.
+
+## Independent GitHub CI
+
+[Run 37375913047](https://github.com/maganrobotics-boop/urmanipulation/actions/runs/37375913047)
+completed successfully on 2026-10-05 at 21:29 UTC for source commit
+`44c3e9c85861ada88b0892c93888a6ca760330f5`. Both jobs passed:
+
+- `simulation`: installs Community dependencies, runs the five contract tests and
+  all seven headless demos, and exports the integrated playback plan.
+- `ros2-transport`: consumes that plan in `ros:humble-ros-base` on Ubuntu 22.04,
+  repeats the five contract tests and passes all three separate-process Action cases
+  with the default verifier's localhost DDS configuration.
+
+Artifacts are `community-simulation` and `community-ros2`. Run, job and artifact
+identifiers and digests are recorded in [the CI evidence](validation/github-actions.json).
+The release-status documentation update follows this tested source commit and
+does not change executable code, dependencies or workflow configuration.
+
+This confirms standard same-host discovery and Action communication with mock
+servers. The CI run does not determine whether each DDS payload used shared memory
+or UDP, and does not exercise cross-machine networking or the actual C++ Navigation stack.
 
 ## ROS2 follow-up
 
@@ -43,8 +66,9 @@ no UDP/TCP transport is configured. Three separate-process tests passed:
 
 This verifies real ROS2 serialization, discovery, actions, feedback and results over
 same-host IPC against mock capability servers. It does not validate UDP networking,
-physical devices, or the actual C++ Navigation stack. The Ubuntu 22.04 system-ROS2
-CI job is still queued; local RoboStack results must not be reported as a CI pass.
+physical devices, or the actual C++ Navigation stack. The shared-memory JSON report
+preserves the observation made before CI completed; its queued-CI note is historical.
+The successful independent system-ROS2 CI run is recorded separately above.
 
 ## Issues found and handled
 

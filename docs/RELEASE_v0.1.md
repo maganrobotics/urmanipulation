@@ -2,7 +2,7 @@
 
 ## Release scope
 
-This release candidate adds a runnable Community learning layer over the original
+This version adds a runnable Community learning layer over the original
 WRS/UR3e code. Quick Start and six progressive demos cover UR3e, grasping,
 RRT-Connect, fixed dual arms, a kinematic mobile assembly and an integrated geometric task.
 
@@ -39,13 +39,16 @@ requirements, assets, app directories and core numerical algorithms are retained
 - [x] Model meshes load and dual-arm geometry renders offscreen.
 - [x] README commands, attribution and release boundaries reviewed.
 - [x] Real ROS2 Humble Action transport: success and two injected failures pass using same-host shared memory.
-- [ ] Independent Ubuntu 22.04 / ROS2 Humble UDP CI verification remains queued.
-- [ ] Optional desktop OS acceptance; physical robots are outside v0.1 scope.
+- [x] Independent Ubuntu 24.04 / Python 3.12 CI: all seven demos and five contract tests pass.
+- [x] Independent Ubuntu 22.04 / ROS2 Humble CI: all three localhost Action cases and five contract tests pass.
 
-See [exact verification results](COMMUNITY_VALIDATION.md). No final tag or public
-GitHub Release is created merely by preparing this candidate. After the branch's
-CI check completes, maintainers can review and tag the source snapshot as `v0.1`.
-The runnable Community source and local simulation/ROS2 IPC verification are complete.
+The Community v0.1 source is ready for release within the simulation and mock-interface
+scope above. See [exact verification results](COMMUNITY_VALIDATION.md) and
+[passing CI](https://github.com/maganrobotics-boop/urmanipulation/actions/runs/37375913047).
+The tested code commit is `44c3e9c85861ada88b0892c93888a6ca760330f5`; the subsequent
+release-status update changes documentation and evidence only. Maintainers can review
+and tag the branch snapshot as `v0.1`. A final tag and public GitHub Release have not
+been created during this preparation.
 
 ## Known limits
 
@@ -55,3 +58,5 @@ hardware or gripper commands. The integrated example starts with known reachable
 grips and excludes perception, approach planning, contact dynamics and handover.
 Collision checking samples joint-space paths, not a continuous swept volume.
 Only the Community examples are verified, not all historical research applications.
+Desktop interaction, other operating systems, cross-machine ROS2 communication and
+physical robots have not been tested and are outside this release's acceptance scope.
